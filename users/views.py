@@ -1,0 +1,17 @@
+from django.http import HttpResponseNotFound
+from django.views.generic import CreateView
+from django.urls import reverse_lazy
+
+from .forms import CreationForm
+
+
+class SignUp(CreateView):
+    form_class = CreationForm
+    success_url = reverse_lazy('signup')
+    template_name = 'users/signup.html'
+
+
+def pageNotFound(request, exception):
+    return HttpResponseNotFound('<h1><center>Упс...Страница не найдена или еще не создана ¯\_(ツ)_/¯</center></h1>')
+
+

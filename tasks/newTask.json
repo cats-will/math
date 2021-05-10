@@ -1,0 +1,31 @@
+{
+  "id": 1,
+  "start": "$$ \\int 5 (x^5 +5) dx = ? $$",
+  "hints": [
+    {
+      "title": "Подсказка 1: Воспользуйтесь свойством интеграла",
+      "content": "$$\\fcolorbox{E0FFFF}{B0E0E6}{$ \\int\\colorbox{E0FFFF}{$\\alpha$} f(x) dx = \\colorbox{E0FFFF}{$\\alpha$}\\int f(x)\n        dx, \\alpha\\isin\\Reals $} $$\n",
+      "answer": "$$=> 5\\int (x^5 +5) dx$$"
+    },
+    {
+      "title": "Подсказка 2: Воспользуйтесь свойством интеграла",
+      "content": "$$\\fcolorbox{E0FFFF}{B0E0E6}{$ \\int f(x) \\pm g(x) dx = \\int\n    f(x) dx \\pm \\int g(x) dx $}$$",
+      "answer": "$$ => 5( \\int x^5 dx + \\int 5 dx)$$"
+    },
+    {
+      "title": "Подсказка 3.1: ",
+      "content": "$$Используя \\ \\fcolorbox{E0FFFF}{B0E0E6}{$ \\int x^n dx =\n  \\frac{x^{n+1}}{n+1}, n\n  {=}\\mathllap{/\\,} -1$}, найти \\ интеграл$$",
+      "answer": "$$=> 5(\\frac{x^6}{6} + \\int 5dx) $$"
+    },
+    {
+      "title": "Подсказка 3.2: ",
+      "content": "$$ \\fcolorbox{E0FFFF}{B0E0E6}{$\\int adx = ax $} $$",
+      "answer": "$$ => 5(\\frac{x^6}{6} + 5x) $$"
+    },
+    {
+      "title": "Подсказка 4: Раскройте скобки.",
+      "content": "",
+      "answer": "$$ => \\frac{5x^6}{6} + 25x + C, C \\isin\\Reals$$"
+    }
+  ]
+}

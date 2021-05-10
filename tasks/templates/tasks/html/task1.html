@@ -1,0 +1,23 @@
+{% extends 'tasks/html/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <form action="" method="get">
+            <h1>Обучающий пример</h1>
+            {{ start }}
+            <div class="str-block"><label for="">Введите дальнейший шаг</label>
+                <label for="num"></label><input type="text" name="num" id="num">
+                <button type="submit" name="button">Отправить</button>
+            </div>
+            {% for hint in hints %}
+                {% if forloop.counter == num or num == -1 %}
+                    <div>
+                        <br><div class="str-block">{{ hint.title }}</div>
+                        {{ hint.content }}
+{#                        {{ hint.answer }}#}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </form>
+    </div>
+{% endblock %}
